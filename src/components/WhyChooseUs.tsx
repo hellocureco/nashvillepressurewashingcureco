@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
             Why Choose Nashville Pressure Washing?
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            We're Nashville's trusted partner for pressure washing and parking lot striping. Serving the greater Nashville area 
+            We&apos;re Nashville&apos;s trusted partner for pressure washing and parking lot striping. Serving the greater Nashville area 
             including Franklin, Brentwood, Murfreesboro, and Hendersonville with professional, compliant services.
           </p>
         </div>
@@ -131,7 +131,7 @@ export default function WhyChooseUs() {
             What Our Customers Say
           </h3>
           <p className="text-gray-600 dark:text-gray-300">
-            Don't just take our word for it - hear from our satisfied customers across Nashville
+            Don&apos;t just take our word for it - hear from our satisfied customers across Nashville
           </p>
         </div>
 
@@ -150,7 +150,7 @@ export default function WhyChooseUs() {
 
               {/* Content */}
               <p className="text-gray-600 dark:text-gray-300 mb-6 italic leading-relaxed">
-                "{testimonial.content}"
+                &ldquo;{testimonial.content}&rdquo;
               </p>
 
               {/* Author */}

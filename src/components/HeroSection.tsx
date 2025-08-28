@@ -14,7 +14,7 @@ export default function HeroSection() {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                Nashville's #1
+                Nashville&apos;s #1
                 <span className="block text-blue-200">Pressure Washing</span>
                 <span className="block">& Parking Lot Striping</span>
               </h1>

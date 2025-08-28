@@ -138,7 +138,7 @@ export default function ContactSection() {
               </button>
 
               <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                * Required fields. We'll contact you within 24 hours to schedule your estimate.
+                * Required fields. We&apos;ll contact you within 24 hours to schedule your estimate.
               </p>
             </form>
           </div>
