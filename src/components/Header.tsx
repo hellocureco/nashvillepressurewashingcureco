@@ -22,15 +22,15 @@ export default function Header() {
   return (
     <header className="bg-black shadow-sm sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Image
               src="/CURE COMPANY placeholder LOGO-02.jpg"
               alt="The Cure Company"
-              width={200}
-              height={60}
-              className="h-12 w-auto"
+              width={300}
+              height={100}
+              className="h-20 w-auto"
               priority
             />
           </div>
