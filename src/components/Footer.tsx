@@ -14,11 +14,11 @@ export default function Footer() {
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-8">
             <div className="flex items-center space-x-2">
-              <Phone className="w-5 h-5 text-blue-400" />
+              <Phone className="w-5 h-5 text-gray-400" />
               <span className="text-gray-300">(615) 555-0123</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Mail className="w-5 h-5 text-blue-400" />
+              <Mail className="w-5 h-5 text-gray-400" />
               <span className="text-gray-300">info@thecurecompany.com</span>
             </div>
           </div>

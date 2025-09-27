@@ -35,19 +35,19 @@ export default function WhyChooseUs() {
 
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">5+</div>
+            <div className="text-3xl font-bold text-gray-700 mb-2">5+</div>
             <div className="text-gray-600 dark:text-gray-300">Years Experience</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
+            <div className="text-3xl font-bold text-gray-700 mb-2">200+</div>
             <div className="text-gray-600 dark:text-gray-300">Commercial Clients</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">100%</div>
+            <div className="text-3xl font-bold text-gray-700 mb-2">100%</div>
             <div className="text-gray-600 dark:text-gray-300">Compliance Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600 mb-2">24/7</div>
+            <div className="text-3xl font-bold text-gray-700 mb-2">24/7</div>
             <div className="text-gray-600 dark:text-gray-300">Emergency Service</div>
           </div>
         </div>

@@ -2,77 +2,112 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 
 export const metadata: Metadata = {
-  title: 'The Cure Company - Coming Soon',
-  description: 'Professional pressure washing and parking lot striping services coming soon to Nashville, TN',
+  title: 'The Cure Company - Store Compliance & Upkeep',
+  description: 'Your Partner in Store Compliance & Upkeep - Mystery Motorist Program and Marathon Insight services',
 }
 
-export default function UnderConstruction() {
+export default function LandingPage() {
   return (
-    <main className="min-h-screen bg-black flex items-center justify-center">
-      <div className="text-center text-white px-4">
-        {/* Logo */}
-        <div className="mb-8">
-          <Image
-            src="/CURE COMPANY placeholder LOGO-02.jpg"
-            alt="The Cure Company"
-            width={400}
-            height={133}
-            className="mx-auto"
-            priority
-          />
-        </div>
-
-        {/* Main Message */}
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
-          Coming Soon
-        </h1>
-        
-        <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          Professional pressure washing and parking lot striping services for Nashville, TN
-        </p>
-
-        {/* Contact Info */}
-        <div className="space-y-4 mb-8">
-          <div className="text-lg">
-            <span className="text-gray-400">Phone: </span>
-            <span className="font-semibold">(615) 555-0123</span>
-          </div>
-          <div className="text-lg">
-            <span className="text-gray-400">Email: </span>
-            <span className="font-semibold">info@thecurecompany.com</span>
-          </div>
-        </div>
-
-        {/* Services Preview */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">Commercial Pressure Washing</h3>
-            <p className="text-gray-400 text-sm">Gas stations, convenience stores, and industrial facilities</p>
-          </div>
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">Parking Lot Striping</h3>
-            <p className="text-gray-400 text-sm">ADA compliance, fire lanes, and line painting</p>
-          </div>
-          <div className="bg-gray-800 rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-2">Residential Services</h3>
-            <p className="text-gray-400 text-sm">House washing, driveway cleaning, deck restoration</p>
+    <main className="min-h-screen bg-black text-white">
+      <div className="max-w-6xl mx-auto px-4 py-16">
+        {/* Header Section */}
+        <div className="border-b border-white mb-12 pb-8">
+          <div className="flex flex-col md:flex-row items-center justify-between">
+            {/* Company Name */}
+            <div className="mb-6 md:mb-0">
+              <h1 className="text-4xl md:text-5xl font-bold">THE CURE COMPANY™</h1>
+            </div>
+            
+            {/* Partner Logos */}
+            <div className="flex items-center space-x-8">
+              {/* Shell Logo */}
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/ShellLogo.png"
+                  alt="Shell"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* Marathon Logo */}
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/marathonlogo.png"
+                  alt="Marathon"
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              
+              {/* ExxonMobil Logo */}
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/exxonlogo.png"
+                  alt="ExxonMobil"
+                  width={80}
+                  height={40}
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Coming Soon Badge */}
-        <div className="space-y-4">
-          <div className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">
-            Website Launching Soon
-          </div>
-          
-          {/* Link to full site for testing */}
-          <div className="mt-6">
-            <a 
-              href="/home" 
-              className="inline-block bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              View Full Website (Testing)
-            </a>
+        {/* Main Content */}
+        <div className="text-center">
+          {/* Tagline */}
+          <h2 className="text-2xl md:text-3xl font-light mb-12">
+            Your Partner in Store Compliance & Upkeep
+          </h2>
+
+          {/* Service Boxes */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* Mystery Motorist Program Box */}
+            <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
+              <div className="absolute bottom-0 right-0 opacity-20">
+                {/* Shell logo background element */}
+                <Image
+                  src="/ShellLogo.png"
+                  alt="Shell"
+                  width={120}
+                  height={120}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Mystery Motorist Program (MMP)</h3>
+              </div>
+              
+              <div className="text-center">
+                <a href="/mmp" className="text-lg hover:text-gray-300 transition-colors">Learn More &gt;&gt;</a>
+              </div>
+            </div>
+
+            {/* Marathon Insight Box */}
+            <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
+              <div className="absolute bottom-0 right-0 opacity-20">
+                {/* Marathon logo background element */}
+                <Image
+                  src="/marathonlogo.png"
+                  alt="Marathon"
+                  width={120}
+                  height={120}
+                  className="object-contain"
+                />
+              </div>
+              
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Marathon Insight</h3>
+              </div>
+              
+              <div className="text-center">
+                <a href="/marathon" className="text-lg hover:text-gray-300 transition-colors">Learn More &gt;&gt;</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

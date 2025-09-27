@@ -102,7 +102,7 @@ export default function FAQSection() {
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             Still have questions? We&apos;re here to help!
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             Contact Us
           </button>
         </div>

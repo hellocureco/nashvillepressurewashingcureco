@@ -101,7 +101,7 @@ export default function ContactSection() {
               
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-blue-600" />
+                  <Phone className="w-5 h-5 text-gray-600" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
                     <p className="text-lg font-semibold text-gray-900 dark:text-white">(615) 555-0123</p>
@@ -109,7 +109,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-blue-600" />
+                  <Mail className="w-5 h-5 text-gray-600" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
                     <p className="text-lg font-semibold text-gray-900 dark:text-white">info@thecurecompany.com</p>
@@ -117,7 +117,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-blue-600" />
+                  <MapPin className="w-5 h-5 text-gray-600" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Service Area</p>
                     <p className="text-lg font-semibold text-gray-900 dark:text-white">Nashville & Surrounding Areas</p>
@@ -125,7 +125,7 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center space-x-3">
-                  <Clock className="w-5 h-5 text-blue-600" />
+                  <Clock className="w-5 h-5 text-gray-600" />
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Hours</p>
                     <p className="text-lg font-semibold text-gray-900 dark:text-white">Mon-Fri: 8AM-6PM</p>
@@ -135,10 +135,10 @@ export default function ContactSection() {
               </div>
             </div>
 
-            <div className="bg-blue-600 rounded-lg p-6 text-white text-center">
+            <div className="bg-gray-700 rounded-lg p-6 text-white text-center">
               <h3 className="text-lg font-semibold mb-2">Need Emergency Commercial Service?</h3>
-              <p className="text-blue-100 mb-4">24/7 emergency response for compliance issues and urgent cleaning needs</p>
-              <button className="bg-white text-blue-600 hover:bg-blue-50 px-6 py-3 rounded-lg font-semibold transition-colors">
+              <p className="text-gray-200 mb-4">24/7 emergency response for compliance issues and urgent cleaning needs</p>
+              <button className="bg-white text-gray-700 hover:bg-gray-50 px-6 py-3 rounded-lg font-semibold transition-colors">
                 Call (615) 555-0123
               </button>
             </div>
@@ -162,7 +162,7 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="Your name"
                 />
               </div>
@@ -178,7 +178,7 @@ export default function ContactSection() {
                   value={formData.phone}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="(615) 555-0123"
                 />
               </div>
@@ -192,7 +192,7 @@ export default function ContactSection() {
                   name="service"
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                 >
                   <option value="">Select a service</option>
                   <option value="commercial">Commercial Pressure Washing</option>
@@ -215,7 +215,7 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={3}
-                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
+                  className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="Tell us about your commercial property, compliance needs, timeline, or any specific requirements..."
                 ></textarea>
               </div>
@@ -238,7 +238,7 @@ export default function ContactSection() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition-colors"
+                className="w-full bg-gray-700 hover:bg-gray-800 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition-colors"
               >
                 {isSubmitting ? 'Sending...' : 'Request Commercial Quote'}
               </button>

@@ -38,12 +38,6 @@ export default function Header() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button
-              onClick={() => scrollToSection('services')}
-              className="text-gray-300 hover:text-white transition-colors"
-            >
-              Services
-            </button>
-            <button
               onClick={() => scrollToSection('about')}
               className="text-gray-300 hover:text-white transition-colors"
             >
@@ -71,7 +65,7 @@ export default function Header() {
             </div>
             <button
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+              className="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
             >
               Free Estimate
             </button>
@@ -97,12 +91,6 @@ export default function Header() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-black border-t border-gray-700">
               <button
-                onClick={() => scrollToSection('services')}
-                className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
-              >
-                Services
-              </button>
-              <button
                 onClick={() => scrollToSection('about')}
                 className="block w-full text-left px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors"
               >
@@ -122,12 +110,12 @@ export default function Header() {
               </button>
               <div className="px-3 py-2 border-t border-gray-700">
                 <div className="flex items-center space-x-2 mb-3">
-                  <Phone className="w-4 h-4 text-blue-400" />
+                  <Phone className="w-4 h-4 text-gray-400" />
                   <span className="text-white font-semibold">(615) 555-0123</span>
                 </div>
                 <button
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                  className="w-full bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                 >
                   Free Estimate
                 </button>

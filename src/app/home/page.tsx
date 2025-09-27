@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
-import ServicesSection from '@/components/ServicesSection'
 import WhyChooseUs from '@/components/WhyChooseUs'
 import FAQSection from '@/components/FAQSection'
 import ContactSection from '@/components/ContactSection'
@@ -27,7 +26,6 @@ export default function Home() {
       <StructuredData />
       <Header />
       <HeroSection />
-      <ServicesSection />
       <WhyChooseUs />
       <FAQSection />
       <ContactSection />

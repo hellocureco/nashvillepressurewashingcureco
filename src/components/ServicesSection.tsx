@@ -56,13 +56,13 @@ export default function ServicesSection() {
               key={index}
               className={`relative bg-white dark:bg-gray-700 rounded-lg shadow-sm border-2 ${
                 service.popular 
-                  ? 'border-blue-500' 
+                  ? 'border-gray-500' 
                   : 'border-gray-200 dark:border-gray-600'
               }`}
             >
               {service.popular && (
                 <div className="absolute -top-3 left-6">
-                  <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                  <span className="bg-gray-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
                     Most Popular
                   </span>
                 </div>
@@ -73,10 +73,10 @@ export default function ServicesSection() {
               >
                 <div className="flex items-center space-x-4">
                   <div className={`w-12 h-12 rounded-lg flex items-center justify-center ${
-                    service.popular ? 'bg-blue-500' : 'bg-blue-100 dark:bg-blue-900'
+                    service.popular ? 'bg-gray-600' : 'bg-gray-100 dark:bg-gray-800'
                   }`}>
                     <service.icon className={`w-6 h-6 ${
-                      service.popular ? 'text-white' : 'text-blue-600 dark:text-blue-400'
+                      service.popular ? 'text-white' : 'text-gray-600 dark:text-gray-400'
                     }`} />
                   </div>
                   <div>
@@ -89,7 +89,7 @@ export default function ServicesSection() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <span className="text-lg font-bold text-blue-600">
+                  <span className="text-lg font-bold text-gray-700">
                     Starting at {service.startingPrice}
                   </span>
                   {expandedService === index ? (
@@ -114,7 +114,7 @@ export default function ServicesSection() {
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
                             <li key={featureIndex} className="flex items-center space-x-2">
-                              <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                              <div className="w-1.5 h-1.5 bg-gray-500 rounded-full"></div>
                               <span className="text-sm text-gray-600 dark:text-gray-300">
                                 {feature}
                               </span>
@@ -123,7 +123,7 @@ export default function ServicesSection() {
                         </ul>
                       </div>
                       <div className="flex items-end">
-                        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                        <button className="w-full bg-gray-700 hover:bg-gray-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
                           Get Free Estimate
                         </button>
                       </div>
@@ -139,7 +139,7 @@ export default function ServicesSection() {
           <p className="text-gray-600 dark:text-gray-300 mb-4">
             Need something else? We also provide gas station forecourt cleaning, convenience store pressure washing, ADA compliance striping, and emergency services throughout Middle Tennessee.
           </p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="bg-gray-700 hover:bg-gray-800 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
             Call (615) 555-0123
           </button>
         </div>

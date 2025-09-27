@@ -24,7 +24,7 @@ export default function HeroSection() {
         
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
           <div className="flex items-center space-x-3">
-            <Phone className="w-6 h-6 text-blue-400" />
+            <Phone className="w-6 h-6 text-gray-400" />
             <span className="text-2xl font-semibold">(615) 555-0123</span>
           </div>
           <div className="text-gray-200">
@@ -34,19 +34,19 @@ export default function HeroSection() {
 
         <div className="grid md:grid-cols-4 gap-6 max-w-3xl mx-auto">
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-2">EPA</div>
+            <div className="text-2xl font-bold text-gray-300 mb-2">EPA</div>
             <div className="text-gray-200">Compliant</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-2">ADA</div>
+            <div className="text-2xl font-bold text-gray-300 mb-2">ADA</div>
             <div className="text-gray-200">Certified</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-2">24/7</div>
+            <div className="text-2xl font-bold text-gray-300 mb-2">24/7</div>
             <div className="text-gray-200">Emergency</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-blue-400 mb-2">Free</div>
+            <div className="text-2xl font-bold text-gray-300 mb-2">Free</div>
             <div className="text-gray-200">Estimates</div>
           </div>
         </div>
