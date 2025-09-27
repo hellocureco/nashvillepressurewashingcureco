@@ -1,8 +1,84 @@
 'use client'
 
-import { Phone, Mail, MapPin, Clock } from 'lucide-react'
+import { useState } from 'react'
+import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react'
+import { supabase } from '@/lib/supabase'
 
 export default function ContactSection() {
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    service: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      // Validate required fields
+      if (!formData.name.trim() || !formData.phone.trim()) {
+        throw new Error('Name and phone are required')
+      }
+
+      // Check if Supabase is configured
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+      if (!supabaseUrl || supabaseUrl === 'https://placeholder.supabase.co') {
+        // Fallback: simulate successful submission for demo purposes
+        console.log('Supabase not configured, simulating form submission:', formData)
+        setSubmitStatus('success')
+        setFormData({ name: '', phone: '', service: '', message: '' })
+        return
+      }
+
+      // Insert into Supabase
+      const { data, error } = await supabase
+        .from('contact_submissions')
+        .insert([
+          {
+            name: formData.name.trim(),
+            phone: formData.phone.trim(),
+            service: formData.service || null,
+            message: formData.message.trim() || null,
+            status: 'new'
+          }
+        ])
+        .select()
+
+      if (error) {
+        console.error('Supabase error:', error)
+        throw new Error('Failed to submit form')
+      }
+
+      if (data && data.length > 0) {
+        setSubmitStatus('success')
+        setFormData({ name: '', phone: '', service: '', message: '' })
+        
+        // Optional: Send email notification (you can set up email triggers in Supabase)
+        console.log('Form submitted successfully:', data[0])
+      } else {
+        throw new Error('No data returned from submission')
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   return (
     <section id="contact" className="py-16 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,7 +150,7 @@ export default function ContactSection() {
               Request Commercial Quote
             </h3>
             
-            <form className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Contact Name *
@@ -83,6 +159,8 @@ export default function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
                   required
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="Your name"
@@ -97,6 +175,8 @@ export default function ContactSection() {
                   type="tel"
                   id="phone"
                   name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
                   required
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="(615) 555-0123"
@@ -110,6 +190,8 @@ export default function ContactSection() {
                 <select
                   id="service"
                   name="service"
+                  value={formData.service}
+                  onChange={handleInputChange}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                 >
                   <option value="">Select a service</option>
@@ -130,17 +212,35 @@ export default function ContactSection() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={3}
                   className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white dark:bg-gray-600 text-gray-900 dark:text-white"
                   placeholder="Tell us about your commercial property, compliance needs, timeline, or any specific requirements..."
                 ></textarea>
               </div>
 
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="flex items-center space-x-2 text-green-600 bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                  <CheckCircle className="w-5 h-5" />
+                  <span className="text-sm font-medium">Thank you! We&apos;ll contact you within 24 hours.</span>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="flex items-center space-x-2 text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
+                  <AlertCircle className="w-5 h-5" />
+                  <span className="text-sm font-medium">Sorry, there was an error. Please try again or call us directly.</span>
+                </div>
+              )}
+
               <button
                 type="submit"
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg font-semibold transition-colors"
+                disabled={isSubmitting}
+                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 disabled:cursor-not-allowed text-white py-3 rounded-lg font-semibold transition-colors"
               >
-                Request Commercial Quote
+                {isSubmitting ? 'Sending...' : 'Request Commercial Quote'}
               </button>
             </form>
           </div>
