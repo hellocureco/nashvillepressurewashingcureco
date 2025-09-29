@@ -125,7 +125,7 @@ export default function Home() {
                   src="/Shell-logo-full-color.jpg" 
                   alt="" 
                   fill 
-                  className="object-contain object-right-bottom" 
+                  className="object-cover" 
                 />
               </div>
               <div className="relative z-10">
@@ -140,7 +140,7 @@ export default function Home() {
                   src="/marathon-logo-full-color.jpg" 
                   alt="" 
                   fill 
-                  className="object-contain object-right-bottom" 
+                  className="object-cover" 
                 />
               </div>
               <div className="relative z-10">

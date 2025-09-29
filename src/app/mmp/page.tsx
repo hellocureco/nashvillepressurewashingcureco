@@ -137,7 +137,7 @@ export default function MMPPage() {
             src="/Shell-logo-full-color.jpg" 
             alt="" 
             fill 
-            className="object-contain object-right-bottom" 
+            className="object-cover" 
           />
         </div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">

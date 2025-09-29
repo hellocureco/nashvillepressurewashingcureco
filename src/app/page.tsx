@@ -67,14 +67,13 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Mystery Motorist Program Box */}
             <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
-              <div className="absolute bottom-0 right-0 opacity-30">
+              <div className="absolute inset-0 opacity-30">
                 {/* Shell logo background element */}
                 <Image
                   src="/Shell-logo-full-color.jpg"
                   alt="Shell"
-                  width={120}
-                  height={120}
-                  className="object-contain"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
@@ -89,14 +88,13 @@ export default function LandingPage() {
 
             {/* Marathon Insight Box */}
             <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
-              <div className="absolute bottom-0 right-0 opacity-30">
+              <div className="absolute inset-0 opacity-30">
                 {/* Marathon logo background element */}
                 <Image
                   src="/marathon-logo-full-color.jpg"
                   alt="Marathon"
-                  width={120}
-                  height={120}
-                  className="object-contain"
+                  fill
+                  className="object-cover"
                 />
               </div>
               
