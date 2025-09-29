@@ -67,7 +67,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Mystery Motorist Program Box */}
             <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
-              <div className="absolute inset-0 opacity-30">
+              <div className="absolute inset-0 opacity-30 rounded-lg overflow-hidden">
                 {/* Shell logo background element */}
                 <Image
                   src="/Shell-logo-full-color.jpg"
@@ -76,6 +76,8 @@ export default function LandingPage() {
                   className="object-cover"
                 />
               </div>
+              {/* Dark to darker gradient overlay */}
+              <div className="absolute inset-0 rounded-lg pointer-events-none bg-gradient-to-t from-black/70 to-black/40" />
               
               <div>
                 <h3 className="text-xl font-semibold mb-4">Mystery Motorist Program (MMP)</h3>
@@ -88,7 +90,7 @@ export default function LandingPage() {
 
             {/* Marathon Insight Box */}
             <div className="relative border border-white rounded-lg p-8 bg-black min-h-[300px] flex flex-col justify-between">
-              <div className="absolute inset-0 opacity-30">
+              <div className="absolute inset-0 opacity-30 rounded-lg overflow-hidden">
                 {/* Marathon logo background element */}
                 <Image
                   src="/marathon-logo-full-color.jpg"
@@ -97,6 +99,8 @@ export default function LandingPage() {
                   className="object-cover"
                 />
               </div>
+              {/* Dark to darker gradient overlay */}
+              <div className="absolute inset-0 rounded-lg pointer-events-none bg-gradient-to-t from-black/70 to-black/40" />
               
               <div>
                 <h3 className="text-xl font-semibold mb-4">Marathon Insight</h3>
