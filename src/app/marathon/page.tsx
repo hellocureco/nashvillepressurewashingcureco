@@ -124,12 +124,12 @@ export default function MarathonPage() {
 
       {/* Marathon Audit Remediation Details */}
       <section className="py-16 bg-gray-50 dark:bg-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-15">
           <Image 
             src="/marathon-logo-full-color.jpg" 
             alt="" 
             fill 
-            className="object-contain object-center" 
+            className="object-contain object-center mix-blend-overlay" 
           />
         </div>
         <div className="max-w-6xl mx-auto px-4 relative z-10">
