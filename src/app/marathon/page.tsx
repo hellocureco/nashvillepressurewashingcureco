@@ -123,8 +123,16 @@ export default function MarathonPage() {
       </section>
 
       {/* Marathon Audit Remediation Details */}
-      <section className="py-16 bg-gray-50 dark:bg-neutral-900">
-        <div className="max-w-6xl mx-auto px-4">
+      <section className="py-16 bg-gray-50 dark:bg-neutral-900 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <Image 
+            src="/marathon-logo-full-color.jpg" 
+            alt="" 
+            fill 
+            className="object-contain object-center" 
+          />
+        </div>
+        <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold mb-3">Fix Marathon Insight Findings with Contractor-Level Work</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
