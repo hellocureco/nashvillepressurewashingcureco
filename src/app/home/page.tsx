@@ -119,15 +119,35 @@ export default function Home() {
             <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Surface remediation, protective coatings, painting, structural touch-ups, and compliant documentation designed for Shell MMP and Marathon Insight programs.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6">
-              <h3 className="text-lg font-semibold mb-2">Shell MMP Cure Photos</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">Qualifying fixes and photo submission support to restore points.</p>
-              <Link href="/mmp" className="text-black dark:text-white font-semibold inline-flex items-center hover:underline">Explore Shell MMP <ArrowRight className="ml-1 w-4 h-4" /></Link>
+            <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                <Image 
+                  src="/Shell-logo-full-color.jpg" 
+                  alt="" 
+                  fill 
+                  className="object-contain object-right-bottom" 
+                />
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-lg font-semibold mb-2">Shell MMP Cure Photos</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Qualifying fixes and photo submission support to restore points.</p>
+                <Link href="/mmp" className="text-black dark:text-white font-semibold inline-flex items-center hover:underline">Explore Shell MMP <ArrowRight className="ml-1 w-4 h-4" /></Link>
+              </div>
             </div>
-            <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6">
-              <h3 className="text-lg font-semibold mb-2">Marathon Insight Fixes</h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">Contractor-level remediation and organized documentation.</p>
-              <Link href="/marathon" className="text-black dark:text-white font-semibold inline-flex items-center hover:underline">Explore Marathon <ArrowRight className="ml-1 w-4 h-4" /></Link>
+            <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6 relative overflow-hidden">
+              <div className="absolute inset-0 opacity-10">
+                <Image 
+                  src="/marathon-logo-full-color.jpg" 
+                  alt="" 
+                  fill 
+                  className="object-contain object-right-bottom" 
+                />
+              </div>
+              <div className="relative z-10">
+                <h3 className="text-lg font-semibold mb-2">Marathon Insight Fixes</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">Contractor-level remediation and organized documentation.</p>
+                <Link href="/marathon" className="text-black dark:text-white font-semibold inline-flex items-center hover:underline">Explore Marathon <ArrowRight className="ml-1 w-4 h-4" /></Link>
+              </div>
             </div>
             <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6">
               <h3 className="text-lg font-semibold mb-2">Compliance Support</h3>
