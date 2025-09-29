@@ -70,7 +70,7 @@ export default function LandingPage() {
               <div className="absolute bottom-0 right-0 opacity-20">
                 {/* Shell logo background element */}
                 <Image
-                  src="/ShellLogo.png"
+                  src="/Shell-logo-full-color.jpg"
                   alt="Shell"
                   width={120}
                   height={120}
@@ -92,7 +92,7 @@ export default function LandingPage() {
               <div className="absolute bottom-0 right-0 opacity-20">
                 {/* Marathon logo background element */}
                 <Image
-                  src="/marathonlogo.png"
+                  src="/marathon-logo-full-color.jpg"
                   alt="Marathon"
                   width={120}
                   height={120}
