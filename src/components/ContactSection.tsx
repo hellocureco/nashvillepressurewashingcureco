@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Phone, Mail, MapPin, Clock, CheckCircle, AlertCircle } from 'lucide-react'
-import { supabase } from '@/lib/supabase'
+// Removed direct Supabase import - now using API route
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -33,44 +33,24 @@ export default function ContactSection() {
         throw new Error('Name and phone are required')
       }
 
-      // Check if Supabase is configured
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
-      if (!supabaseUrl || supabaseUrl === 'https://placeholder.supabase.co') {
-        // Fallback: simulate successful submission for demo purposes
-        console.log('Supabase not configured, simulating form submission:', formData)
-        setSubmitStatus('success')
-        setFormData({ name: '', phone: '', service: '', message: '' })
-        return
+      // Submit to API route
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        throw new Error(result.error || 'Failed to submit form')
       }
 
-      // Insert into Supabase
-      const { data, error } = await supabase
-        .from('contact_submissions')
-        .insert([
-          {
-            name: formData.name.trim(),
-            phone: formData.phone.trim(),
-            service: formData.service || null,
-            message: formData.message.trim() || null,
-            status: 'new'
-          }
-        ])
-        .select()
-
-      if (error) {
-        console.error('Supabase error:', error)
-        throw new Error('Failed to submit form')
-      }
-
-      if (data && data.length > 0) {
-        setSubmitStatus('success')
-        setFormData({ name: '', phone: '', service: '', message: '' })
-        
-        // Optional: Send email notification (you can set up email triggers in Supabase)
-        console.log('Form submitted successfully:', data[0])
-      } else {
-        throw new Error('No data returned from submission')
-      }
+      setSubmitStatus('success')
+      setFormData({ name: '', phone: '', service: '', message: '' })
+      console.log('Form submitted successfully:', result)
     } catch (error) {
       console.error('Form submission error:', error)
       setSubmitStatus('error')
