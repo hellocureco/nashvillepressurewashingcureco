@@ -60,7 +60,7 @@ export default function Header() {
           {/* Phone Number & CTA */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="flex items-center space-x-2">
-              <Phone className="w-4 h-4 text-blue-400" />
+              <Phone className="w-4 h-4 text-gray-400" />
               <span className="text-white font-semibold">(615) 555-0123</span>
             </div>
             <button
