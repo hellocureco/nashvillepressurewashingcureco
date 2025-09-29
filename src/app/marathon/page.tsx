@@ -124,7 +124,7 @@ export default function MarathonPage() {
 
       {/* Marathon Audit Remediation Details */}
       <section className="py-16 bg-gray-50 dark:bg-neutral-900 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-30">
           <Image 
             src="/marathon-logo-full-color.jpg" 
             alt="" 

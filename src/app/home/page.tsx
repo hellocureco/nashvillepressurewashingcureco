@@ -120,7 +120,7 @@ export default function Home() {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 opacity-20">
                 <Image 
                   src="/Shell-logo-full-color.jpg" 
                   alt="" 
@@ -135,7 +135,7 @@ export default function Home() {
               </div>
             </div>
             <div className="rounded-lg border border-gray-100 dark:border-neutral-800 p-6 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 opacity-20">
                 <Image 
                   src="/marathon-logo-full-color.jpg" 
                   alt="" 
