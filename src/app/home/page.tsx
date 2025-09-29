@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import Image from 'next/image'
 import { ArrowRight, Paintbrush, Hammer, Shield, Camera, Check } from 'lucide-react'
+import ContactSection from '@/components/ContactSection'
 
 export const metadata: Metadata = {
   title: 'Gas Station Compliance Remediation – Shell MMP & Marathon Insight | The Cure Co.',
@@ -196,6 +197,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact */}
+      <ContactSection />
 
       {/* Final CTA */}
       <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-black text-white">
