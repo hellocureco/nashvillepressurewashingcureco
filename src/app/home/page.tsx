@@ -70,38 +70,38 @@ export default function Home() {
       <Script id="home-services-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }} />
 
       {/* Hero */}
-      <section className="bg-gradient-to-br from-gray-900 to-black text-white py-20">
+      <section className="bg-gradient-to-br from-gray-900 to-black text-white py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div>
-              <h1 className="text-4xl md:text-6xl font-bold mb-4">Shell MMP & Marathon Insight Audit Fixes</h1>
-              <p className="text-lg md:text-xl text-gray-300 mb-8">Contractor-level remediation and compliant cure photos—not just cleaning. We repair, repaint, coat, document, and help you restore your points.</p>
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold mb-3 sm:mb-4">Shell MMP & Marathon Insight Audit Fixes</h1>
+              <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">Contractor-level remediation and compliant cure photos—not just cleaning. We repair, repaint, coat, document, and help you restore your points.</p>
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link href="/mmp" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center">
+                <Link href="/mmp" className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center w-full sm:w-auto justify-center">
                   Shell MMP Solutions
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
-                <Link href="/marathon" className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors inline-flex items-center">
+                <Link href="/marathon" className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors inline-flex items-center w-full sm:w-auto justify-center">
                   Marathon Audit Fixes
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
               </div>
               <p className="text-sm text-gray-400 mt-3">Serving Tennessee • Mississippi • Arkansas</p>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/10 rounded-lg p-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              <div className="bg-white/10 rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-2"><Paintbrush className="w-6 h-6 mr-2" /><h3 className="font-semibold">Painting & Coatings</h3></div>
                 <p className="text-sm text-gray-300">Dispenser repainting, fascia color-matching, bollards/curbs</p>
               </div>
-              <div className="bg-white/10 rounded-lg p-6">
+              <div className="bg-white/10 rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-2"><Hammer className="w-6 h-6 mr-2" /><h3 className="font-semibold">Structural Repairs</h3></div>
                 <p className="text-sm text-gray-300">Canopy fascia patch, panel replacement, minor exterior repair</p>
               </div>
-              <div className="bg-white/10 rounded-lg p-6">
+              <div className="bg-white/10 rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-2"><Shield className="w-6 h-6 mr-2" /><h3 className="font-semibold">Compliance Support</h3></div>
                 <p className="text-sm text-gray-300">Map findings to fixes, plan timelines, meet cure windows</p>
               </div>
-              <div className="bg-white/10 rounded-lg p-6">
+              <div className="bg-white/10 rounded-lg p-4 sm:p-6">
                 <div className="flex items-center mb-2"><Camera className="w-6 h-6 mr-2" /><h3 className="font-semibold">Cure Photos</h3></div>
                 <p className="text-sm text-gray-300">Before/after angles and labeling for compliant documentation</p>
               </div>
@@ -138,23 +138,23 @@ export default function Home() {
       </section>
 
       {/* Before & After */}
-      <section className="py-16 bg-gray-50 dark:bg-neutral-900">
+      <section className="py-14 sm:py-16 bg-gray-50 dark:bg-neutral-900">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">Before & After</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">Examples of contractor-level improvements suitable for audit cures.</p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3">Before & After</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-sm sm:text-base">Examples of contractor-level improvements suitable for audit cures.</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <figure className="rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800 bg-white dark:bg-black">
-              <Image src="/dirty1.jpg" alt="Before remediation: chipped paint and stains near dispenser" width={800} height={600} className="w-full h-56 object-cover" />
+              <Image src="/dirty1.jpg" alt="Before remediation: chipped paint and stains near dispenser" width={800} height={600} className="w-full h-48 sm:h-56 object-cover" />
               <figcaption className="p-3 text-sm text-gray-600 dark:text-gray-300">Before: Faded paint and stains</figcaption>
             </figure>
             <figure className="rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800 bg-white dark:bg-black">
-              <Image src="/dirty2.jpg" alt="Before remediation: canopy fascia damage prior to repair" width={800} height={600} className="w-full h-56 object-cover" />
+              <Image src="/dirty2.jpg" alt="Before remediation: canopy fascia damage prior to repair" width={800} height={600} className="w-full h-48 sm:h-56 object-cover" />
               <figcaption className="p-3 text-sm text-gray-600 dark:text-gray-300">Before: Canopy fascia damage</figcaption>
             </figure>
             <figure className="rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800 bg-white dark:bg-black">
-              <Image src="/cure1.jpg" alt="After remediation: repainting and repaired fascia suitable for cure photos" width={800} height={600} className="w-full h-56 object-cover" />
+              <Image src="/cure1.jpg" alt="After remediation: repainting and repaired fascia suitable for cure photos" width={800} height={600} className="w-full h-48 sm:h-56 object-cover" />
               <figcaption className="p-3 text-sm text-gray-700 dark:text-gray-200 font-medium">After: Repainted, repaired, coated</figcaption>
             </figure>
           </div>
@@ -198,13 +198,13 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 to-black text-white">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-900 to-black text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">Need Cure Photos That Get Approved?</h2>
-          <p className="text-xl text-gray-300 mb-8">Contractor-level remediation and compliant documentation from The Cure Co.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:info@thecurecompany.com" className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Request Support</a>
-            <Link href="/mmp" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors">Explore Shell MMP</Link>
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4">Need Cure Photos That Get Approved?</h2>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8">Contractor-level remediation and compliant documentation from The Cure Co.</p>
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <a href="mailto:info@thecurecompany.com" className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors w-full sm:w-auto">Request Support</a>
+            <Link href="/mmp" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-black transition-colors w-full sm:w-auto">Explore Shell MMP</Link>
           </div>
           <div className="mt-6 text-sm text-gray-400 inline-flex items-center justify-center"><Check className="w-4 h-4 mr-2" /> Typical assessment within 24–48 hours in TN/MS/AR</div>
         </div>
